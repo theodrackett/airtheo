@@ -5,7 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import commonLibs.contacts.iDriver;
+
+import commonLibs.interfaces.iDriver;
 
 public class CommonDrivers implements iDriver {
 
