@@ -11,8 +11,6 @@ import commonLibs.interfaces.iDriver;
 public class CommonDrivers implements iDriver {
 
     private WebDriver driver;
-    // private int pageLoadTimeout;
-    // private int elementDetectionTimeout;
     private static String currentWorkingDir;
 
     public static WebDriver getDriver(String browser) {
@@ -21,17 +19,17 @@ public class CommonDrivers implements iDriver {
 
         switch (browser.toLowerCase()) {
             case "chrome":
-                // Set the path to the ChromeDriver if needed
+                // Path to the ChromeDriver
                 System.setProperty("webdriver.chrome.driver", currentWorkingDir + "/drivers/chromedriver");
                 ChromeOptions chromeOptions = new ChromeOptions();
-                // Add any Chrome specific options here
+                // Chrome specific options
                 driver = new ChromeDriver(chromeOptions);
                 break;
             case "edge":
-                // Set the path to the EdgeDriver if needed
+                // Path to the EdgeDriver
                 System.setProperty("webdriver.edge.driver", currentWorkingDir + "/drivers/msedgedriver");
                 EdgeOptions edgeOptions = new EdgeOptions();
-                // Add any Edge specific options here
+                // Edge specific options
                 driver = new EdgeDriver(edgeOptions);
                 break;
             default:
@@ -42,8 +40,6 @@ public class CommonDrivers implements iDriver {
     }
 
     public CommonDrivers(String browserType) throws Exception {
-        // pageLoadTimeout = 60;
-        // elementDetectionTimeout = 10;
         driver = getDriver(browserType);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();

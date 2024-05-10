@@ -3,7 +3,9 @@ package commonLibs.implementations;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class FrameControls implements commonLibs.interfaces.iFrames {
+import commonLibs.interfaces.iFrames;
+
+public class FrameControls implements iFrames {
 
     private WebDriver driver;
 

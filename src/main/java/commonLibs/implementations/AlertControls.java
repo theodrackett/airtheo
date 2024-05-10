@@ -1,12 +1,15 @@
 package commonLibs.implementations;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
 
-public class AlertControls implements commonLibs.interfaces.iAlert {
+import commonLibs.interfaces.iAlert;
 
-    private org.openqa.selenium.WebDriver driver;
+public class AlertControls implements iAlert {
 
-    public AlertControls(org.openqa.selenium.WebDriver driver) {
+    private WebDriver driver;
+
+    public AlertControls(WebDriver driver) {
         this.driver = driver;
     }
 

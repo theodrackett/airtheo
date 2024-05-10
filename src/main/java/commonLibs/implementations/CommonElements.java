@@ -1,5 +1,6 @@
 package commonLibs.implementations;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -7,7 +8,7 @@ import commonLibs.interfaces.iCommonElements;
 
 public class CommonElements implements iCommonElements {
 
-    private org.openqa.selenium.WebDriver driver;
+    private WebDriver driver;
 
     @Override
     public String getText(WebElement element) throws Exception {
