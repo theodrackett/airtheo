@@ -1,4 +1,4 @@
-package commonLibs.contacts;
+package commonLibs.interfaces;
 
 public interface iDriver {
     public void navigateToFirstUrl(String url) throws Exception;
