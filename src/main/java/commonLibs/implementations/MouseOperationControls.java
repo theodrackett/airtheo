@@ -1,6 +1,7 @@
 package commonLibs.implementations;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import commonLibs.interfaces.iMouseOperations;
 
@@ -28,8 +29,8 @@ public class MouseOperationControls implements iMouseOperations {
     }
 
     @Override
-    public void moveToElement() throws Exception {
-        action.moveToElement(null).build().perform();
+    public void moveToElement(WebElement element) throws Exception {
+        action.moveToElement(element).build().perform();
     }
 
     @Override

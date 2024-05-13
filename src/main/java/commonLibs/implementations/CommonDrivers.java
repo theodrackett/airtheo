@@ -20,14 +20,14 @@ public class CommonDrivers implements iDriver {
         switch (browser.toLowerCase()) {
             case "chrome":
                 // Path to the ChromeDriver
-                System.setProperty("webdriver.chrome.driver", currentWorkingDir + "/drivers/chromedriver");
+                System.setProperty("webdriver.chrome.driver", currentWorkingDir + "/drivers/chromedriver.exe");
                 ChromeOptions chromeOptions = new ChromeOptions();
                 // Chrome specific options
                 driver = new ChromeDriver(chromeOptions);
                 break;
             case "edge":
                 // Path to the EdgeDriver
-                System.setProperty("webdriver.edge.driver", currentWorkingDir + "/drivers/msedgedriver");
+                System.setProperty("webdriver.edge.driver", currentWorkingDir + "/drivers/msedgedriver.exe");
                 EdgeOptions edgeOptions = new EdgeOptions();
                 // Edge specific options
                 driver = new EdgeDriver(edgeOptions);

@@ -1,5 +1,7 @@
 package commonLibs.interfaces;
 
+import org.openqa.selenium.WebElement;
+
 public interface iMouseOperations {
 
     public void click() throws Exception;
@@ -8,7 +10,7 @@ public interface iMouseOperations {
 
     public void doubleClick() throws Exception;
 
-    public void moveToElement() throws Exception;
+    public void moveToElement(WebElement element) throws Exception;
 
     public void dragAndDrop() throws Exception;
 
