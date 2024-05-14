@@ -47,7 +47,6 @@ public class AlertControls implements iAlert {
     public void enterTextInAlert(String textToEnter) throws Exception {
 
         getAlert().sendKeys(textToEnter);
-
     }
 
     @Override

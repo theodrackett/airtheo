@@ -1,5 +1,7 @@
 package commonLibs.implementations;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -45,10 +47,12 @@ public class CommonDrivers implements iDriver {
         driver.manage().deleteAllCookies();
     }
 
-    @Override
-    public void navigateToFirstUrl(String url) throws Exception {
-        url = url.trim();
-        driver.get(url);
+    public void setPageLoadTimeout(int i) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(i));
+    }
+
+    public void setElementDetectionTimeout(int i) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(i));
     }
 
     @Override

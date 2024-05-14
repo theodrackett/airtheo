@@ -12,7 +12,8 @@ public class MercuryTravelHomePage {
     private static MouseOperationControls mouseOperationControls;
 
     public MercuryTravelHomePage(WebDriver driver) {
-        customerLogin = driver.findElement(By.linkText(" Customer Login "));
+        customerLogin = driver.findElement(By.className("dropdown-toggle"));
+        // customerLogin = driver.findElement(By.linkText(" Customer Login "));
 
         mouseOperationControls = new MouseOperationControls(driver);
     }

@@ -18,17 +18,18 @@ public class MercuryTravelHomePageTests {
     @BeforeClass
     public static void invokeBrowser() throws Exception {
         commonDriver = new CommonDrivers("chrome");
-        // commonDriver.setPageLoadTimeout(30);
-        // commonDriver.setElementDetectionTimeout(5);
+        commonDriver.setPageLoadTimeout(30);
+        commonDriver.setElementDetectionTimeout(5);
 
         driver = CommonDrivers.getDriver("chrome");
-        commonDriver.navigateToFirstUrl(url);
+        commonDriver.navigateToUrl(url);
         mercuryTravelHomePage = new MercuryTravelHomePage(driver);
 
     }
 
     @Test
     public void loginUser() throws Exception {
+        driver.close();
         mercuryTravelHomePage.loginUser();
 
     }

@@ -1,7 +1,10 @@
 package commonLibs.interfaces;
 
 public interface iDriver {
-    public void navigateToFirstUrl(String url) throws Exception;
+
+    public void setElementDetectionTimeout(int timeOut) throws Exception;
+
+    public void setPageLoadTimeout(int timeOut) throws Exception;
 
     public String getTitle() throws Exception;
 
